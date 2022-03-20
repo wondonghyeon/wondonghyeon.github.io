@@ -19,18 +19,18 @@
 # in the templates via {{ site.myvariable }}.
 # Site Settings
 locale                   : "en-US"
-title                    : "Donghyeon Won"
+title                    : "Donghyeon Won
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Donghyeon Won"
-description              : "Perception Engineer"
+description              : 
 url                      : dhwon.com  # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : wondonghyeon/personal-webpage # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : wondonghyeon/wondonghyeon.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs            : true # true, false (default)
+breadcrumbs              : # true, false (default)
 words_per_minute         : 230
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -106,9 +106,8 @@ analytics:
 author:
   name             : "Donghyeon Won"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I'm Donghyeon and I usually go by DH."
+  bio              : "Computer Vision engineer. I usually go by DH (\"D\"ong\"h\"yeon)."
   location         : "Los Angeles"
-  email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -128,6 +127,9 @@ author:
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/donghyeon-won-951534100/"
 
 # Site Footer
 footer:
@@ -296,3 +298,10 @@ defaults:
       related: true
       show_date: true
       date_format: "%Y-%m-%d"
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
