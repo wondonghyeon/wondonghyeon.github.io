@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Donghyeon Won"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : /files/images/profiles/profile-han-river.jpg
   bio              : "Computer Vision engineer. I usually go by DH (\"D\"ong\"h\"yeon)."
   location         : "Los Angeles"
   links:
