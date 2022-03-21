@@ -55,7 +55,7 @@ comments:
     theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
   staticman:
     branch               : master
-    endpoint             : https://dh-webpage-static-comments.herokuapp.com/v3/entry/github/ # "https://{your Staticman v3 API}/v3/entry/github/"
+    endpoint             : https://dh-comments-bot.herokuapp.com/v3/entry/github/ # "https://{your Staticman v3 API}/v3/entry/github/"
 reCaptcha:
   siteKey                :
   secret                 :
