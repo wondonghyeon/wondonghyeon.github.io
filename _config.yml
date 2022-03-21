@@ -53,9 +53,10 @@ comments:
     discussion_term      : # "pathname" (default), "url", "title", "og:title"
     reactions_enabled    : # '1' for enabled (default), '0' for disabled
     theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
-  staticman:
-    branch               : master
-    endpoint             : https://dh-comments-bot.herokuapp.com/v3/entry/github/ # "https://{your Staticman v3 API}/v3/entry/github/"
+  # staticman:
+  #   branch               : master
+  #   endpoint             : https://dh-comments-bot.herokuapp.com/v3/entry/github/ # "https://{your Staticman v3 API}/v3/entry/github/"
+staticman_url: https://dh-comments-bot.herokuapp.com/v3/entry/wondonghyeon/wondonghyeon.github.io/master/comments
 reCaptcha:
   siteKey                :
   secret                 :
