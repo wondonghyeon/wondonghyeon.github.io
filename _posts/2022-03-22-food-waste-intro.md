@@ -2,7 +2,7 @@
 type: posts
 title: Food Waste
 header:
-  image: /files/images/food-waste/rotten-fruits.jpg
+  image: /files/images/headers/rotten-fruits.jpg
   caption: "Photo credit: [**unsplash@jccards**](https://unsplash.com/@jccards)"
 # TODO: Update this date.
 date:   2022-03-27 03:25:00 +0900
