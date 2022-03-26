@@ -1,6 +1,6 @@
 ---
 type: posts
-title: Food Waste
+title: Food Waste and Loss - Introduction
 header:
   image: /files/images/headers/rotten-fruits.jpg
   caption: "Photo credit: [**unsplash@jccards**](https://unsplash.com/@jccards)"
