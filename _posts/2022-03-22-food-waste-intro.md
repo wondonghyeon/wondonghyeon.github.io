@@ -5,8 +5,8 @@ header:
   image: /files/images/headers/rotten-fruits.jpg
   caption: "Photo credit: [**unsplash@jccards**](https://unsplash.com/@jccards)"
 # TODO: Update this date.
-date:   2022-03-27 03:25:00 +0900
-last_modified_at: 2022-03-27 03:25:00 +0900
+date:   2022-03-27 06:07:00 +0900
+last_modified_at: 2022-03-27 06:07:00 +0900
 categories: sustainability
 tags:
  - food waste
