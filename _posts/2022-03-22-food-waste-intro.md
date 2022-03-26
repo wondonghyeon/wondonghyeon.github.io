@@ -27,7 +27,7 @@ The world is producing more food than it needs, which is simply an enormous wast
 The followings are some interesting facts and statistics that I found.
 
 * Around 14% of food produced is lost between harvest and retail[^3].
-* 17% of total food production is wasted - 11% in households, 5% in the food service and 2% in retail [^3]. I know the numbers don't add up, but don't blame me. I just copy pasted the number from the reference 😅.
+* 17% of total food production is wasted - 11% in households, 5% in the food service and 2% in retail [^3]. I know the numbers don't add up, but don't blame me. I just copy-pasted the numbers from the reference 😅.
 * Food loss and waste account for 38% of total energy usage in the global food system[^3].
 * The food we waste is responsible for roughly 8% to 10% of global emissions[^6].
 * In 2019, the U.S. wasted $408 billion worth of food, which is about 2% of U.S GDP, with a greenhouse gas footprint equivalent to 4% of total U.S. emissions[^7].
