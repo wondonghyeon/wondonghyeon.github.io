@@ -279,7 +279,9 @@ Let’s first look at the U.S. data. I’ll be looking at the “Whole supply ch
 country = 'United States of America'
 year = 2005
 supply_stage = "Whole supply chain"
-df_filtered = df[(df['country']==country) & (df['food_supply_stage'] == supply_stage) & (df['year'] > year)]
+df_filtered = df[(df['country'] == country) & 
+                 (df['food_supply_stage'] == supply_stage) & 
+                 (df['year'] > year)]
 
 plot_order = df_filtered.groupby(by='commodity').mean().sort_values(by='loss_percentage', ascending=False).index.tolist()
 fig, ax = plt.subplots(figsize=(20, 6))
@@ -316,7 +318,9 @@ year = 2005
 supply_stage = "Whole supply chain"
 countries = ["Hungary", "Austria"]
 commodity = "Plums and sloes"
-df_filtered = df[df['country'].isin(countries) & (df['food_supply_stage'] == supply_stage) & (df['year'] > year) & (df['commodity'] == commodity)]
+df_filtered = df[df['country'].isin(countries) & 
+                 (df['food_supply_stage'] == supply_stage) & 
+                 (df['year'] > year) & (df['commodity'] == commodity)]
 df_filtered[['country', 'commodity', 'loss_percentage', 'food_supply_stage', 'method_data_collection','reference', 'year']]
 ```
 <div>
