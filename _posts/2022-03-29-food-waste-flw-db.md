@@ -4,8 +4,8 @@ title: Food Waste - Exploring Food Loss and Waste Database from FAO
 header:
   image: /files/images/headers/rotten-fruits.jpg
   caption: "Photo credit: [**unsplash@jccards**](https://unsplash.com/@jccards)"
-date:   2022-03-29 19:15:00 +0900
-last_modified_at: 2022-03-29 19:15:00 +0900
+date:   2022-03-30 02:32:00 +0900
+last_modified_at: 2022-03-30 02:32:00 +0900
 categories: sustainability
 tags:
  - food waste
