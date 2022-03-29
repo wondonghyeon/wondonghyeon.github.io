@@ -543,4 +543,4 @@ If you look at [the Background of the Food Loss and Waste Database page](https:/
 > * There may be underlying biases when it comes to the data that has been collected, both at the national level and within the individual studies and the focus will be put on problematic areas
 > * In the case studies, the sample sizes may not be large enough to extrapolate causes and solutions to a general policy prescription.
 
-IMO, this means we can’t draw any conclusions from the data. I appreciate and highly think of the initial effort to collect the data. Still, I look forward to more large-scale standardized data collection methods so people can do more insightful analyses.
+IMO, this means we can’t draw any conclusions from the data. I appreciate and highly think of the initial effort to collect the data. Still, I look forward to more standardized data collection so people can do more insightful analyses.
