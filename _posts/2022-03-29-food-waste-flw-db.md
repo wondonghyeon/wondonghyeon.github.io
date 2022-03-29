@@ -22,8 +22,7 @@ In this post, we'll take a quick look at the Food Loss and Waste Database (FLW D
 I used Python and Pandas/Seaborn/Matplotlib libraries to visualize the data. You can find the full Python scripts on my [GitHub repository](https://github.com/wondonghyeon/codes-for-blog/tree/master/food-waste). 
 
 ## TL;DR
-TODO: Fill this in.
-
+As described in [the Background of the Food Loss and Waste Database page](https://www.fao.org/platform-food-loss-waste/flw-data/background/en/), there are very clear limitations of the dataset. The data collection research for food waste and loss seems to be at a very early-stage, so it's hard to draw meaningful and insightful conclusion just by looking at the dataset. However, since data visualization is fun and satisfying, I plotted some interesting graphs.
 
 ## Database Overview
 ### Downloading the Data
@@ -303,19 +302,239 @@ Here are some plots for different countries that used the same code for as the [
 ![png](/files/images/others/canada-food-loss-whole-supply-chain-since-2005.png)
 * Canada data is very similiar to the U.S. data.
 * There is "Meat of pig, fresh or chilled" commodity in Candata data, which is not found in the U.S. data.
-#### Germany, Hungary, Austria
-
+#### Austria, Germany, Hungary
+The followings are from European countries.
+![png](/files/images/others/austria-food-loss-whole-supply-chain-since-2005.png)
 ![png](/files/images/others/germany-food-loss-whole-supply-chain-since-2005.png)
 ![png](/files/images/others/hungary-food-loss-whole-supply-chain-since-2005.png)
-![png](/files/images/others/austria-food-loss-whole-supply-chain-since-2005.png)
+* The above plots are mostly about grains (e.g. Rye, Wheat, Barley...). I guess grain data in these countries were easier to collect than other commodities for FAO. 
+* "Plums and sloes" loss is low in Hungary (about 2.5%), while the same number is high for Austria (about 28%). It's hard to believe that Austria is more than 10 times efficient in processing plums than Hungary. I looked at "reference" and "method_data_collection" of the rows but seems like they are the same. To me, this seems like a limitation of the dataset. Even though the data collection method is the same, it's hard to beleive the numbers.
 
-#### 
-### Distribution Per Commodity (Whole Supply Chain)
+```python
+year = 2005
+supply_stage = "Whole supply chain"
+countries = ["Hungary", "Austria"]
+commodity = "Plums and sloes"
+df_filtered = df[df['country'].isin(countries) & (df['food_supply_stage'] == supply_stage) & (df['year'] > year) & (df['commodity'] == commodity)]
+df_filtered[['country', 'commodity', 'loss_percentage', 'food_supply_stage', 'method_data_collection','reference', 'year']]
+```
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-## Which Country Produces Most Food Waste?
-### Potatoes
-### Wheat
-### Rice
-### Raw Milk of Cattle
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>commodity</th>
+      <th>loss_percentage</th>
+      <th>food_supply_stage</th>
+      <th>method_data_collection</th>
+      <th>reference</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>7720</th>
+      <td>Hungary</td>
+      <td>Plums and sloes</td>
+      <td>2.40</td>
+      <td>Whole supply chain</td>
+      <td>FAO's annual Agriculture Production Questionna...</td>
+      <td>FAO Sources</td>
+      <td>2014</td>
+    </tr>
+    <tr>
+      <th>10267</th>
+      <td>Austria</td>
+      <td>Plums and sloes</td>
+      <td>26.12</td>
+      <td>Whole supply chain</td>
+      <td>FAO's annual Agriculture Production Questionna...</td>
+      <td>FAO Sources</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>10282</th>
+      <td>Austria</td>
+      <td>Plums and sloes</td>
+      <td>35.30</td>
+      <td>Whole supply chain</td>
+      <td>FAO's annual Agriculture Production Questionna...</td>
+      <td>FAO Sources</td>
+      <td>2006</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+#### Mexico, Peru
+![png](/files/images/others/mexico-food-loss-whole-supply-chain-since-2005.png)
+![png](/files/images/others/peru-food-loss-whole-supply-chain-since-2005.png)
+* "Watermelons" loss percentages seem too different for these two countries. Mexico is about 0.4% and Peru is about 45%. 
+* The Mexico data doesn't have a reference so this difference kind of makes sense. One can imagine how difficult collecting food waste data, which is yet very ill defined.
+
+```python
+year = 2005
+supply_stage = "Whole supply chain"
+countries = ["Mexico", "Peru"]
+commodity = "Watermelons"
+df_filtered = df[df['country'].isin(countries) & (df['food_supply_stage'] == supply_stage) & (df['year'] > year) & (df['commodity'] == commodity)]
+df_filtered[['country', 'commodity', 'loss_percentage', 'food_supply_stage', 'method_data_collection','reference', 'year']]
+```
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>commodity</th>
+      <th>loss_percentage</th>
+      <th>food_supply_stage</th>
+      <th>method_data_collection</th>
+      <th>reference</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>13919</th>
+      <td>Mexico</td>
+      <td>Watermelons</td>
+      <td>0.42</td>
+      <td>Whole supply chain</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2011</td>
+    </tr>
+    <tr>
+      <th>17149</th>
+      <td>Peru</td>
+      <td>Watermelons</td>
+      <td>45.19</td>
+      <td>Whole supply chain</td>
+      <td>FAO's annual Agriculture Production Questionna...</td>
+      <td>FAO Sources</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>17178</th>
+      <td>Peru</td>
+      <td>Watermelons</td>
+      <td>45.17</td>
+      <td>Whole supply chain</td>
+      <td>FAO's annual Agriculture Production Questionna...</td>
+      <td>FAO Sources</td>
+      <td>2006</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+### Food Loss Per Commodity (Whole Supply Chain)
+As we seen from the Watermelon data from Mexico and Peru, if the data collection methods are different, there might be a huge difference. From now on, I'll only use the data where the reference is "FAO Sources" and "method_data_collection" is "FAO's annual Agriculture Production Questionnaires". 
+The below box plot shows the food loss percentage distribution per commodity from all the countries. 
+
+```python
+supply_stage = "Whole supply chain"
+year = 2005
+reference = "FAO Sources"
+data_collection_method = "FAO's annual Agriculture Production Questionnaires"
+df_filtered = df[(df['food_supply_stage'] == supply_stage) & 
+                 (df['year'] >= year) & 
+                 (df['reference'] == reference) & 
+                 (df['method_data_collection'] == data_collection_method)]
+# Get commodities with data points from many countries.
+n_country_threshold = 6  # We only use commidity where data is collected from more than n_country_threshold countries. 
+unique_country_commodity_pairs = set(zip(df_filtered['country'], df_filtered['commodity'])) # unique (country, commodity) pairs
+commodity_counter = Counter([commodity_ for _, commodity_ in unique_country_commodity_pairs]) 
+common_commodities = set({x: count for x, count in commodity_counter.items() if count >= n_country_threshold}.keys())
+df_filtered = df_filtered[df_filtered['commodity'].isin(common_commodities)]
+commodity_plot_order = df_filtered.groupby(by='commodity').mean().sort_values(by='loss_percentage', ascending=False).index.tolist()
+fig, ax = plt.subplots(figsize=(25, 6))
+plot = sns.boxplot(x='commodity', y='loss_percentage', data=df_filtered, order=commodity_plot_order)
+ax.set_xticklabels(ax.get_xticklabels(), rotation = 45, horizontalalignment='right')
+ax.set_title(f"Food Loss ({supply_stage}) from all countries (from {year}, reference={reference})".title() )
+ax.set(xlabel=None)
+plt.show()
+```
+    
+![png](/files/images/others/food-loss-per-commodity-box-plot.png)
+
+### Which Country Has the Highest Food Loss?
+The below plots show how much food loss percentage for "Potatoes", "Wheat", "Rice" and "Hen eggs in shell, fresh" for different countries. We can interpret how efficient/inefficient the country's supply chains are for each commodity.
+
+
+```python
+supply_stage = "Whole supply chain"
+year = 2005
+reference = "FAO Sources"
+data_collection_method = "FAO's annual Agriculture Production Questionnaires"
+df_filtered = df[(df['food_supply_stage'] == supply_stage) & 
+                 (df['year'] >= year) & 
+                 (df['reference'] == reference) & 
+                 (df['method_data_collection'] == data_collection_method)]
+unique_country_commodity_pairs = set(zip(df_filtered['country'], df_filtered['commodity'])) # unique (country, commodity) pairs
+common_commodities = [commodity for commodity, _ in Counter([commodity for _, commodity in unique_country_commodity_pairs]).most_common(10)]
+
+commodity_to_plot = ['Potatoes',
+                     'Wheat', 
+                     'Rice',
+                     'Hen eggs in shell, fresh']
+for commodity in common_commodities:
+    if commodity not in commodity_to_plot:
+        continue
+    df_filtered_by_commodity = df_filtered[df_filtered['commodity'] == commodity]
+    fig, ax = plt.subplots(figsize=(15, 6))
+    plot_order = df_filtered_by_commodity.groupby(by='country').mean().sort_values(by='loss_percentage', ascending=False).index.tolist()
+    sns.barplot(x='country', y='loss_percentage', data=df_filtered_by_commodity, ax=ax, order=plot_order)
+    ax.set_xticklabels(ax.get_xticklabels(), rotation = 45, horizontalalignment='right')
+    ax.set_title(f"'{commodity}' Loss ({supply_stage}) per Country (from {year}, Vertical bars show stddev)".title() )
+    ax.set(xlabel=None)
+    ax.set_ylabel(f"{commodity} loss percentage")
+    plt.show()
+```
+
+![png](/files/images/others/potatoes-loss-per-country.png)    
+
+![png](/files/images/others/wheat-loss-per-country.png)
+
+![png](/files/images/others/rice-loss-per-country.png)
+
+![png](/files/images/others/egg-loss-per-country.png)
+    
 ## Limitation of the Dataset
+If you look at [the Background of the Food Loss and Waste Database page](https://www.fao.org/platform-food-loss-waste/flw-data/background/en/), the FAO describes the limitations of the dataset.
+> * Often studies will sum the loss percentages across the supply chain. This tends to inflate the overall percentage losses and negate that the quantities of the commodities decrease through the supply chain with respect to losses and other utilizations.
+> * The issue of food loss may not be fully captured within national estimates as they often present the lower bound of the problem. On the other hand, studies done with small sample sizes may not be fully representative, even though they represent the upper bound of the problem.
+> * The figures show differences between estimates along different stages of the value chains and regions, making a one-size fits all estimate at the international level less practical when addressing losses. Considering how these estimates change over time by stage and ranges, it will be more effective to look at supply stages which fluctuate in their losses in order to focus on effective policy and investments.
+> * Effective comparison of data is presently hindered by a lack of comparability on many levels: different measurement methodologies across space and commodities, and estimates that may not be repeated over time.
+> * There may be underlying biases when it comes to the data that has been collected, both at the national level and within the individual studies and the focus will be put on problematic areas
+> * In the case studies, the sample sizes may not be large enough to extrapolate causes and solutions to a general policy prescription.
+
+IMO, this basically means we can't draw any conclusions from the data. I really appreciate and highly think of the initial effort to collect the data, but I look forward to more large-scale standardized data collection method so people can do more insightful analysis. 
