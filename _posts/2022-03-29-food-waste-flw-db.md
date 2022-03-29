@@ -1,6 +1,6 @@
 ---
 type: posts
-title: Food Waste - Exploring Food Loss and Waste Database from FAO
+title: Food Waste - Exploring "Food Loss and Waste" Database from FAO
 header:
   image: /files/images/headers/rotten-fruits.jpg
   caption: "Photo credit: [**unsplash@jccards**](https://unsplash.com/@jccards)"
@@ -532,7 +532,7 @@ for commodity in common_commodities:
 ![png](/files/images/others/egg-loss-per-country.png)
     
 ## Limitation of the Dataset
-If you look at [the Background of the Food Loss and Waste Database page](https://www.fao.org/platform-food-loss-waste/flw-data/background/en/), the FAO describes the limitations of the dataset.
+If you look at [the Background of the Food Loss and Waste Database page](https://www.fao.org/platform-food-loss-waste/flw-data/background/en/), FAO describes the limitations of the dataset.
 > * Often studies will sum the loss percentages across the supply chain. This tends to inflate the overall percentage losses and negate that the quantities of the commodities decrease through the supply chain with respect to losses and other utilizations.
 > * The issue of food loss may not be fully captured within national estimates as they often present the lower bound of the problem. On the other hand, studies done with small sample sizes may not be fully representative, even though they represent the upper bound of the problem.
 > * The figures show differences between estimates along different stages of the value chains and regions, making a one-size fits all estimate at the international level less practical when addressing losses. Considering how these estimates change over time by stage and ranges, it will be more effective to look at supply stages which fluctuate in their losses in order to focus on effective policy and investments.
