@@ -271,7 +271,7 @@ Here are the columns that I'll be primarily using for this post. I believe the c
 I apologize for the small font size of the plots. I’m too lazy to rewrite the code. Please open the images in new windows to see the plots better.
 
 ### Which Commodity Has The Most Food Waste?
-This section will visualize the data to see loss percentages for each commodity.
+This section visualizes loss percentages for each commodity.
 ### The U.S. (Whole Supply Chain)
 Let’s first look at the U.S. data. I’ll be looking at the “Whole supply chain” data from 2005.
 
