@@ -26,7 +26,7 @@ As described in [the Background of the Food Loss and Waste Database page](https:
 
 ## Database Overview
 ### Downloading the Data
-Download data from FAO. (**Note: The following steps are valid as of March 2022**)
+Please follow the below steps to download the dataset. (**Note: The following steps are valid as of March 2022**)
 * Go to FAO's FLW data page. [link](https://www.fao.org/platform-food-loss-waste/flw-data/en/).
 * Select "Year Range." I used 1965 - 2021 for this post.
 * Download data by clicking the "Download Data" button on the bottom left of the page. 
@@ -252,7 +252,7 @@ df[:8]
 
 
 ### Columns
-Here are the columns that I'll be primarily using for this post. I believe the column names are self explantory, but please look at [the Background of the Food Loss and Waste Database page](https://www.fao.org/platform-food-loss-waste/flw-data/background/en/) for the full details.
+Here are the columns that I'll be primarily using for this post. I believe the column names are self-explanatory, but please look at [the Background of the Food Loss and Waste Database page](https://www.fao.org/platform-food-loss-waste/flw-data/background/en/) for the full details.
 * year
   * e.g. 2017, 2018, ...
 * country
@@ -311,7 +311,7 @@ The followings data are from three European countries.
 ![png](/files/images/others/germany-food-loss-whole-supply-chain-since-2005.png)
 ![png](/files/images/others/hungary-food-loss-whole-supply-chain-since-2005.png)
 * The above plots are mostly about grains (e.g., Rye, Wheat, Barley). I guess grain data in these countries were easier to collect than other commodities for FAO.
-* “Plums and sloes” loss is low in Hungary (about 2.5%), while the same number is high for Austria (about 28%). It’s hard to believe that Austria is more than ten times more efficient in processing plums than Hungary. I looked at the “reference” and “method_data_collection” of the rows, but they seem to be the same. To me, this seems like a limitation of the dataset. Even though the data collection method is the same, it’s hard to believe the numbers.
+* “Plums and sloes” loss is low in Hungary (about 2.5%), while the same number is high for Austria (about 28%). It’s hard to believe that Austria is ten times more efficient in processing plums than Hungary. I looked at the “reference” and “method_data_collection” of the rows, but they seem to be the same. To me, this seems like a limitation of the dataset - even though the data collection method is the same, it’s hard to believe the numbers.
 
 ```python
 year = 2005
@@ -389,8 +389,7 @@ df_filtered[['country', 'commodity', 'loss_percentage', 'food_supply_stage', 'me
 ![png](/files/images/others/mexico-food-loss-whole-supply-chain-since-2005.png)
 ![png](/files/images/others/peru-food-loss-whole-supply-chain-since-2005.png)
 * “Watermelons” loss percentages seem too different for these two countries. Mexico is about 0.4%, and Peru is about 45%. 
-* The Mexico data doesn’t have a reference, so this difference makes sense. One can imagine how difficult collecting food waste data, which is very ill-defined.
-
+* The Mexico data doesn’t have a reference, so the large difference makes sense. One can imagine how difficult collecting food waste data is.
 
 ```python
 year = 2005
@@ -494,7 +493,7 @@ plt.show()
 * By looking at the plot, it seems like fruits (e.g., tomatoes, watermelons) produce more waste than grains (e.g., oats, rye)
 
 ### Which Country Has the Highest Food Loss?
-The below plots show how much food loss percentage for "Potatoes", "Wheat", "Rice" and "Hen eggs in shell, fresh" for different countries. We can interpret how efficient/inefficient the country's supply chains are for each commodity.
+The below plots show how much food loss percentage for "Potatoes", "Wheat", "Rice" and "Hen eggs in shell, fresh" for different countries. We can interpret how efficient/inefficient each country's supply chain is for various commodities.
 
 
 ```python
