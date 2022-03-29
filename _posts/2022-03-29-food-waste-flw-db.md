@@ -17,7 +17,7 @@ tags:
  - python
 published: true
 ---
-In this post, we'll take a quick look at the Food Loss and Waste Database (FLW DB) from the Food and Agriculture Organization (FAO) of the United Nations. The post will mostly be about data visualization. I'll discuss the limitation of the dataset at the end. 
+In this post, we'll take a quick look at the Food Loss and Waste Database (FLW DB) from the Food and Agriculture Organization (FAO) of the United Nations. The post will be mostly about data visualization and the limitations of the dataset. 
 
 I used Python and Pandas/Seaborn/Matplotlib libraries to visualize the data. You can find the full Python scripts on my [GitHub repository](https://github.com/wondonghyeon/codes-for-blog/tree/master/food-waste). 
 
