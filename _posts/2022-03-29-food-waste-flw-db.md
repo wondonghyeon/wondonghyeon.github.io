@@ -22,7 +22,7 @@ In this post, we'll take a quick look at the Food Loss and Waste Database (FLW D
 I used Python and Pandas/Seaborn/Matplotlib libraries to visualize the data. You can find the full Python scripts on my [GitHub repository](https://github.com/wondonghyeon/codes-for-blog/tree/master/food-waste). 
 
 ## TL;DR
-As described in [the Background of the Food Loss and Waste Database page](https://www.fao.org/platform-food-loss-waste/flw-data/background/en/), there are very clear limitations of the dataset. The data collection research for food waste and loss seems to be at a very early-stage, so it's hard to draw meaningful and insightful conclusion just by looking at the dataset. However, since data visualization is fun and satisfying, I plotted some interesting graphs.
+As described in [the Background of the Food Loss and Waste Database page](https://www.fao.org/platform-food-loss-waste/flw-data/background/en/), the dataset has clear limitations. The data collection research for food waste and loss seems to be at a very early stage, so it’s hard to draw a meaningful and insightful conclusion just by looking at the dataset. However, since data visualization is fun, I plotted some satisfying graphs.
 
 ## Database Overview
 ### Downloading the Data
@@ -268,12 +268,12 @@ Here are the columns that I'll be primarily using for this post. I believe the c
   * e.g. 5%, 13.5%, 43.2%...
 
 ## Data Visualization
-Appologies for the small font size of the plots. I'm too lazy to rewrite the code. Please open the plot images in new windows to see better.
+I apologize for the small font size of the plots. I’m too lazy to rewrite the code. Please open the images in new windows to see the plots better.
 
 ### Which Commodity Has The Most Food Waste?
-In this section, I'll visualize the data to see loss percentages for each commodity. 
+This section will visualize the data to see loss percentages for each commodity.
 ### The U.S. (Whole Supply Chain)
-Let's first look at the U.S. data. I'll be looking at the "Whole suppy chain" data from 2005. 
+Let’s first look at the U.S. data. I’ll be looking at the “Whole supply chain” data from 2005.
 
 ```python
 country = 'United States of America'
@@ -291,24 +291,25 @@ plt.show()
 ```    
 ![png](/files/images/others/us-food-loss-whole-supply-chain-since-2005.png)
 
-Here are some intersting findings.
-* "Grape fruit juice" has large loss percentage while "Grape fruits" has small loss percentage.
+Here are some interesting findings.
+* "Grapefruit juice" has a large loss percentage while "Grapefruits" has a small loss percentage.
 * "Mixed grain" loss is large while individual grains ("Wheat" and "Barley") losses are very small. 
-* There are no data for meat. I don't see beef, pork and chicken. 
+* There are no data for meat. I don't see beef, pork, and chicken. 
 
 ### Other Countries (Whole Supply Chain)
-Here are some plots for different countries that used the same code for as the [above](#the-us-whole-supply-chain). There are more plots in my [repo](https://github.com/wondonghyeon/codes-for-blog/blob/master/food-waste/fao-flw-dataset-exploration.ipynb).
+Here are some plots for different countries that used the same code as the [above](#the-us-whole-supply-chain). There are more plots in my [repo](https://github.com/wondonghyeon/codes-for-blog/blob/master/food-waste/fao-flw-dataset-exploration.ipynb).
 #### Canada
 ![png](/files/images/others/canada-food-loss-whole-supply-chain-since-2005.png)
-* Canada data is very similiar to the U.S. data.
-* There is "Meat of pig, fresh or chilled" commodity in Candata data, which is not found in the U.S. data.
+* Canada data is very similar to U.S. data.
+* There is "Meat of pig, fresh or chilled" in Candata data, which is not found in the U.S. data.
 #### Austria, Germany, Hungary
-The followings are from European countries.
+The followings data are from three European countries.
+
 ![png](/files/images/others/austria-food-loss-whole-supply-chain-since-2005.png)
 ![png](/files/images/others/germany-food-loss-whole-supply-chain-since-2005.png)
 ![png](/files/images/others/hungary-food-loss-whole-supply-chain-since-2005.png)
-* The above plots are mostly about grains (e.g. Rye, Wheat, Barley...). I guess grain data in these countries were easier to collect than other commodities for FAO. 
-* "Plums and sloes" loss is low in Hungary (about 2.5%), while the same number is high for Austria (about 28%). It's hard to believe that Austria is more than 10 times efficient in processing plums than Hungary. I looked at "reference" and "method_data_collection" of the rows but seems like they are the same. To me, this seems like a limitation of the dataset. Even though the data collection method is the same, it's hard to beleive the numbers.
+* The above plots are mostly about grains (e.g., Rye, Wheat, Barley). I guess grain data in these countries were easier to collect than other commodities for FAO.
+* “Plums and sloes” loss is low in Hungary (about 2.5%), while the same number is high for Austria (about 28%). It’s hard to believe that Austria is more than ten times more efficient in processing plums than Hungary. I looked at the “reference” and “method_data_collection” of the rows, but they seem to be the same. To me, this seems like a limitation of the dataset. Even though the data collection method is the same, it’s hard to believe the numbers.
 
 ```python
 year = 2005
@@ -383,8 +384,9 @@ df_filtered[['country', 'commodity', 'loss_percentage', 'food_supply_stage', 'me
 #### Mexico, Peru
 ![png](/files/images/others/mexico-food-loss-whole-supply-chain-since-2005.png)
 ![png](/files/images/others/peru-food-loss-whole-supply-chain-since-2005.png)
-* "Watermelons" loss percentages seem too different for these two countries. Mexico is about 0.4% and Peru is about 45%. 
-* The Mexico data doesn't have a reference so this difference kind of makes sense. One can imagine how difficult collecting food waste data, which is yet very ill defined.
+* “Watermelons” loss percentages seem too different for these two countries. Mexico is about 0.4%, and Peru is about 45%. 
+* The Mexico data doesn’t have a reference, so this difference makes sense. One can imagine how difficult collecting food waste data, which is very ill-defined.
+
 
 ```python
 year = 2005
@@ -457,8 +459,7 @@ df_filtered[['country', 'commodity', 'loss_percentage', 'food_supply_stage', 'me
 </table>
 </div>
 ### Food Loss Per Commodity (Whole Supply Chain)
-As we seen from the Watermelon data from Mexico and Peru, if the data collection methods are different, there might be a huge difference. From now on, I'll only use the data where the reference is "FAO Sources" and "method_data_collection" is "FAO's annual Agriculture Production Questionnaires". 
-The below box plot shows the food loss percentage distribution per commodity from all the countries. 
+As we have seen from the Watermelon data from Mexico and Peru, there might be a massive difference if the data collection methods are different. From now on, I’ll only use the data where the reference is “FAO Sources” and “method_data_collection” is “FAO’s annual Agriculture Production Questionnaires.” The below box plot shows the food loss percentage distribution per commodity from all the countries.
 
 ```python
 supply_stage = "Whole supply chain"
@@ -485,6 +486,8 @@ plt.show()
 ```
     
 ![png](/files/images/others/food-loss-per-commodity-box-plot.png)
+
+* By looking at the plot, it seems like fruits (e.g., tomatoes, watermelons) produce more waste than grains (e.g., oats, rye)
 
 ### Which Country Has the Highest Food Loss?
 The below plots show how much food loss percentage for "Potatoes", "Wheat", "Rice" and "Hen eggs in shell, fresh" for different countries. We can interpret how efficient/inefficient the country's supply chains are for each commodity.
@@ -537,4 +540,4 @@ If you look at [the Background of the Food Loss and Waste Database page](https:/
 > * There may be underlying biases when it comes to the data that has been collected, both at the national level and within the individual studies and the focus will be put on problematic areas
 > * In the case studies, the sample sizes may not be large enough to extrapolate causes and solutions to a general policy prescription.
 
-IMO, this basically means we can't draw any conclusions from the data. I really appreciate and highly think of the initial effort to collect the data, but I look forward to more large-scale standardized data collection method so people can do more insightful analysis. 
+IMO, this means we can’t draw any conclusions from the data. I appreciate and highly think of the initial effort to collect the data. Still, I look forward to more large-scale standardized data collection methods so people can do more insightful analyses.
