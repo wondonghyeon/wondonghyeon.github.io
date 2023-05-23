@@ -5,8 +5,8 @@ title:  "Half-Earth: Our Planet’s Fight for Life - E.O. Wilson"
 header:
   image: /files/images/headers/half-earth-screenshot.png
   caption: "Photo credit: [**Screenshot from Half-Earth Project Map**](https://map.half-earthproject.org/)"
-date: 2023-05-23 00:21:00 -0700
-last_modified_at: 2023-05-23 00:21:00 -0700
+date: 2023-05-23 01:20:00 -0700
+last_modified_at: 2023-05-23 01:45:00 -0700
 categories: book
 tags:
  - book
@@ -15,7 +15,7 @@ tags:
 published: true
 ---
 
-*Half-Earth: Our Planet's Fight for Life* is a book written by the esteemed biologist, E.O. Wilson, which I had the pleasure of reading a few months ago. I truly found it inspiring and highly recommend everyone to read it. The majority of the book desribes how diverse, intriciate and delicate our ecosystem is. I mean, we all know that the nature is very complex, and I thought I knew too. However, after reading all the examples and stories from the author, I felt embarassed how little I knew. This book served as some kind of wake-up call for me. Here are my thoughts and key takeaways, along with some inspiring quotes.
+*Half-Earth: Our Planet's Fight for Life* is a book written by an esteemed biologist, E.O. Wilson, which I had the pleasure of reading a few months ago. I truly found it inspiring and highly recommend everyone to read it. The book mainly focuses on explaining how diverse, intricate and delicate our ecosystem is. I mean, we all know that the nature is very complex right? I thought I knew too. However, after reading the book, I felt embarassed. This book served as some kind of wake-up call for me. Here are my thoughts and key takeaways, along with some inspiring quotes.
 
 * *"The biosphere does not belong to us; we belong to it"* - This is my favorite quote from the book. If more individuals adopt this perspective, the world will be a better place to live. 
     > Leaders in biodiversity research and conservation have long understood that the surviving wildlands of the world are not art museums.
