@@ -15,7 +15,7 @@ published: true
 
 I've always wanted to dive into satellite image analysis. It’s one of the first things that comes to mind when I think about the intersection of sustainability and computer vision. This week, I spent some time setting up Google Earth Engine and experimenting with its APIs. I wrote a script to visualize how the Normalized Difference Vegetation Index (NDVI) changes over time. 
 
-This project was more about getting familiar with the tools rather than performing a detailed analysis. If you’re curious about how I implemented everything, check out my repo! And if you're interested in exploring satellite analysis during your free time, feel free to reach out.
+This project was more about getting familiar with the tools rather than performing a detailed analysis. If you’re curious about how I implemented everything, check out my [repo](https://github.com/wondonghyeon/codes-for-blog)! And if you're interested in exploring satellite analysis during your free time, feel free to reach out.
 
 ### Quick Learnings and Disclaimers
 
