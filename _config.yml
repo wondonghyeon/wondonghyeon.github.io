@@ -107,8 +107,8 @@ analytics:
 author:
   name             : "Donghyeon Won"
   avatar           : /files/images/profiles/profile-han-river.jpg
-  bio              : "Computer Vision engineer. I usually go by DH (\"D\"ong\"h\"yeon)."
-  location         : "Los Angeles"
+  bio              : "AV Perception Engineer"
+  location         : "SF Bay Area, CA"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
