@@ -106,7 +106,7 @@ analytics:
 # Site Author
 author:
   name             : "Donghyeon Won"
-  avatar           : /files/images/profiles/profile-han-river.jpg
+  avatar           : /files/images/profiles/profile.jpg
   bio              : "AV Perception Engineer"
   location         : "SF Bay Area, CA"
   links:
@@ -156,7 +156,7 @@ footer:
 
 # Build settings
 remote_theme             : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
